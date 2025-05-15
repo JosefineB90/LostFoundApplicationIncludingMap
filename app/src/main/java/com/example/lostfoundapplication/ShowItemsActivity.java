@@ -13,6 +13,7 @@ import java.util.List;
 public class ShowItemsActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
+    LostFoundAdapter adapter;
     AppDatabase db;
     LostFoundDao lostFoundDao;
 
@@ -24,12 +25,20 @@ public class ShowItemsActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        // Set up the Room database
         db = Room.databaseBuilder(getApplicationContext(),
                 AppDatabase.class, "lost-found-database").allowMainThreadQueries().build();
         lostFoundDao = db.lostFoundDao();
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // Load the updated list of items whenever the activity becomes visible
         List<LostFoundItem> items = lostFoundDao.getAllItems();
-        LostFoundAdapter adapter = new LostFoundAdapter(items, item -> {
+
+        adapter = new LostFoundAdapter(items, item -> {
             Intent intent = new Intent(ShowItemsActivity.this, ItemDetailActivity.class);
             intent.putExtra("itemId", item.getId());
             startActivity(intent);

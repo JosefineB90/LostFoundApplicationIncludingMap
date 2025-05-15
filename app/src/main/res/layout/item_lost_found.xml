@@ -1,57 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@android:color/white">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/textType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:layout_marginTop="32dp">
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginBottom="8dp" />
 
-        <TextView
-            android:id="@+id/textType"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Type: Lost"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:textColor="#000000"
-            android:layout_marginBottom="12dp" />
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
 
-        <TextView
-            android:id="@+id/textDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Description: Black wallet with zip"
-            android:textSize="16sp"
-            android:layout_marginBottom="12dp" />
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
 
-        <TextView
-            android:id="@+id/textDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Date: 15/05/2025"
-            android:textSize="16sp"
-            android:layout_marginBottom="12dp" />
-
-        <TextView
-            android:id="@+id/textLocation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Location: Library"
-            android:textSize="16sp"
-            android:layout_marginBottom="24dp" />
-
-        <Button
-            android:id="@+id/buttonRemove"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="REMOVE"
-            android:textColor="@android:color/white"
-            android:background="@android:color/holo_red_dark"
-            android:padding="12dp" />
-    </LinearLayout>
-</ScrollView>
+    <TextView
+        android:id="@+id/textLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
+</LinearLayout>
