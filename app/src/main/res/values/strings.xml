@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LostFoundApplication</string>
+    <string name="lost_and_found_items">Lost and Found items</string>
+    <string name="lost_and_found_content">lost and found content</string>
+    <string name="lost_or_found">Lost or Found</string>
+    <string name="description">Description</string>
+    <string name="create_a_new_advert">CREATE A NEW ADVERT</string>
+    <string name="show_all_lost_amp_found_items"><![CDATA[SHOW ALL LOST & FOUND ITEMS]]></string>
+    <string name="show_all_lost_found_items"><![CDATA[SHOW ALL LOST & FOUND ITEMS]]></string>
+</resources>

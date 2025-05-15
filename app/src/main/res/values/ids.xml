@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="createNewAdvertButton" type="id" />
+    <item name="showAllItemsButton" type="id" />
+    <item name="textTitle" type="id" />
+</resources>
